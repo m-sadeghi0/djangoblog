@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>articles</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+  </head>
+  <body>
+    <h1>my articles</h1>
+    <p>wellcom in my articles blog</p>
+    {% for a in artic %}
+    <h2><a href="#">{{ a.title}}</a></h2>
+    <p>{{a.snippet}}</p>
+      <p>{{a.date}}</p>
+    {% endfor %}
+  </body>
+</html>
